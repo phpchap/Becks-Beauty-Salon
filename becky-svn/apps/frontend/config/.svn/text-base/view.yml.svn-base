@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        'Becks Beauty Salon'
+    description:  'Friendly beauty salon in Maynooth run by Becky with over 10 years experience in making you look fabulous.'
+    keywords:     'beauty, treatment, womens treatments, mens treatments, nails, wedding make up, spray tan'
+    language:     en
+    robots:       index, follow
+
+  stylesheets:    [main.css]
+
+  javascripts:    []
+
+  has_layout:     true
+  layout:         layout

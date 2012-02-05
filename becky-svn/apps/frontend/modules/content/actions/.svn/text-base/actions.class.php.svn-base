@@ -1,0 +1,163 @@
+<?php
+
+/**
+ * content actions.
+ *
+ * @package    sf_sandbox
+ * @subpackage content
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class contentActions extends sfActions
+{
+	public function preExecute()
+	{		
+		// initialise the facebook SDK object
+		$this->facebook = new Facebook(array('appId'  => sfConfig::get('app_facebook_app_id'),
+	      													 		   'secret' => sfConfig::get('app_facebook_secret'),
+	      													 		   'cookie' => true));
+
+		$this->action_name = $this->getActionName();
+	}
+	
+	public function executeGetFacebookPhotos(sfWebRequest $request)
+	{
+   		chdir(sfConfig::get('sf_root_dir')); // Trick plugin into thinking you are in a project directory
+    	$task = new updateFacebookPhotosTask($this->dispatcher, new sfFormatter());
+    	$task->run();
+		echo "<a href='http://".$_SERVER['HTTP_HOST']."/backend.php'>Done, click here to return to admin</a>";
+		die;
+	}
+	
+	public function executeAjaxMailingList(sfWebRequest $request)
+	{
+		$path_to_mailchimp = '/../lib/vendor/mailchimp/examples/inc/';
+		require_once getcwd().$path_to_mailchimp.'MCAPI.class.php';
+		require_once getcwd().$path_to_mailchimp.'config.inc.php'; //contains apikey
+	
+		$api = new MCAPI($apikey);
+	
+		$name 	 		  = $request->getParameter('mailing_name');
+		$email 	 		  = $request->getParameter('mailing_email');
+
+		$merge_vars = array('FNAME' => $name);
+		$my_email 	= $email;
+
+		$retval = $api->listSubscribe( $listId, $my_email, $merge_vars );
+
+		if ($api->errorCode){
+			$error="Code=".$api->errorCode."<br/>";
+			$error.="Msg=".$api->errorMessage."<br/>";
+			return $this->renderText($error);		
+		} else {
+			return $this->renderText("OK");
+		}	
+	}	
+
+
+	public function executeAjaxContactUs(sfWebRequest $request)
+	{
+		$name 	 		  = $request->getParameter('name');
+		$email 	 		  = $request->getParameter('email');
+		$phone 	 		  = $request->getParameter('phone');
+		$incoming_message = $request->getParameter('message');
+
+		$subject = "Site Contact Form";
+
+		$eol="<br/>";
+		$message_to_send = "-------------------------------".$eol;	
+		$message_to_send .= "Site Contact Form".$eol;	
+		$message_to_send .= "-------------------------------".$eol;
+		$message_to_send .= "Date :: ".date("d/m/Y", time()).$eol;
+		$message_to_send .= "Name :: ".$name.$eol;
+		$message_to_send .= "Email :: ".$email.$eol;
+		$message_to_send .= "Phone :: ".$phone.$eol;
+		$message_to_send .= "Message :: ".$incoming_message.$eol;
+		$message_to_send .= "-------------------------------".$eol;
+	
+	    $message = $this->getMailer()->compose();
+	    $message->setSubject($subject);
+
+	    $message->setTo(sfConfig::get('app_contact_us_email'));
+	    $message->setFrom(sfConfig::get('app_email_from_address'));
+	    $message->setBody($message_to_send, 'text/html');
+
+    	if($this->getMailer()->send($message)) {
+			return $this->renderText("OK");					
+		} else {
+			return $this->renderText("ERROR");	
+		}  
+  	}
+
+ 	/**
+  	* Executes index action
+  	*
+  	* @param sfRequest $request A request object
+  	*/
+  	public function executeIndex(sfWebRequest $request)
+  	{
+		$num_photos = sfConfig::get('app_num_photos_homepage');
+		$num_offers = sfConfig::get('app_num_offers_homepage');
+
+		$this->photos = FacebookPhotoTable::getFrontpagePhotos();
+		$this->offers = Doctrine_Core::getTable('SpecialOffer')->getSpecialOffers($num_offers, true);
+  	}
+
+	public function getAjaxPhotos()
+	{
+		$photos = $this->facebook->api('/131424670248995/photos');
+		$this->renderText(json_encode($photos));
+		
+	}
+
+  	public function executeGallery(sfWebRequest $request)
+  	{	
+		$this->pager = new sfDoctrinePager('Photo', 10);
+		$this->pager->getQuery()->from('FacebookPhoto p')->where('p.live_in_photos = "1"')->orderBy('p.updated_at DESC');;	
+		$this->pager->setPage($this->getRequestParameter('page', 1));
+		$this->pager->init();	
+  	}
+
+  	public function executeSpecialOffers(sfWebRequest $request)
+  	{
+		$this->offers = Doctrine_Core::getTable('SpecialOffer')->getSpecialOffers();	
+  	}
+
+  	public function executeTreatments(sfWebRequest $request)
+  	{	
+		$this->treatment_groups = Doctrine_Core::getTable('TreatmentGroup')->getTreatmentGroups();	
+  	}
+
+  	public function executeTestimonials(sfWebRequest $request)
+  	{
+		$this->testimonials = Doctrine_Core::getTable('Testimonial')->getTestimonials();	
+  	}
+
+  	public function executeContact(sfWebRequest $request)
+  	{
+		$path_to_google_api = '/../lib/vendor/GoogleMapAPI-3.0/';
+		require_once getcwd().$path_to_google_api.'JSMin.php';		
+		require_once getcwd().$path_to_google_api.'GoogleMapAPI.php';
+
+    	$this->map = new GoogleMapAPI('map');
+				
+/*
+		$this->map->_minify_js = FALSE;
+		$this->map->setDSN("mysql://user:password@localhost/db_name");
+		$this->map->addMarkerByAddress("Denver, CO","Marker Title", "Marker Description");
+*/
+/*
+    $this->map->setAPIKey(sfConfig::get('app_gmaps_api_key'));    
+    $this->map->addMarkerByCoords(sfConfig::get('app_salon_longitude'), 
+																	sfConfig::get('app_salon_latitude'), 
+																	$title = '', 
+																	$html = '', 
+																	$tooltip = '');
+
+		$this->map->setWidth('500px');
+		$this->map->setHeight('500px');	
+		$this->map->enableDirections();
+*/
+	
+  }
+}

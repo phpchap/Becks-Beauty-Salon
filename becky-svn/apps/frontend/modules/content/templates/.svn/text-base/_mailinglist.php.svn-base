@@ -1,0 +1,80 @@
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('.error').hide();
+	
+		$('input.text-input').css({backgroundColor:"#FFFFFF"});
+	
+		$('input.text-input').focus(function(){
+			$(this).css({backgroundColor:"#FFDDAA"});
+		});
+	
+		$('input.text-input').blur(function(){
+			$(this).css({backgroundColor:"#FFFFFF"});
+		});
+
+		$("#mail_submit_btn").click(function() {
+
+			// validate and process form
+			// first hide any error messages
+			$('.error').hide();
+			
+			var mailing_name = $("input#mailing_name").val();
+			
+			if (mailing_name == "") {
+				$("label#mailing_name_error").show();
+				$("input#mailing_name").focus();
+				return false;
+			}
+	
+			var mailing_email = $("input#mailing_email").val();
+			
+			if (mailing_email == "") {
+				$("label#mailing_email_error").show();
+				$("input#mailing_email").focus();
+				return false;
+			}
+			
+			var mailData = 'mailing_name='+ mailing_name + '&mailing_email=' + mailing_email;
+
+			$.ajax({
+				type: "GET",
+				url: "<?php echo url_for('content/ajaxMailingList');?>",
+				data: mailData,
+				success: function(result) {
+					
+					if(result=='OK') {
+			  			$('#mailing_list_form').html("<div id='mailing_list_form'></div>");
+			  			$('#mailing_list_form').html("<h2>Thanks for signing up!</h2>")
+			  			.append("<p>Please check your email to confirm.</p>")
+			  			.hide()
+			  			.fadeIn(1500, function() { $('#message').append("<img id='checkmark' src='/images/check.png' />"); });
+					} else if(result=='ERROR'){
+			  			$('#contact_form').html("<div id='message'></div>");
+			  			$('#message').html("<h2>Error encounter!</h2>")
+			  			.append("<p>Dont panic, we'll fix it soon.</p>");	
+					}
+				}
+			});	
+		    return false;
+		});
+	});
+</script>
+
+						<div class="mailing_list_container" id="mailing_list_form">
+							<h2>Becks Mailing List</h2>
+						  <form name="contact" method="post" action="">
+						    <fieldset>
+						      <label for="mailing_name" id="mailing_name_label">Name *</label>
+						      <label class="error" for="mailing_name" id="mailing_name_error">This field is required.</label>	
+						      <input type="text" name="mailing_name" id="mailing_name" size="30" value="" class="text-input" />
+									<br/>
+						      <label for="mailing_email" id="mailing_email_label">Email *</label>
+						      <label class="error" for="mailing_email" id="mailing_email_error">This field is required.</label>	
+						      <input type="text" name="mailing_email" id="mailing_email" size="30" value="" class="text-input" />
+						      <br />
+						      <input type="button" name="submit" class="button" id="mail_submit_btn" value="Sign up" />
+						    </fieldset>
+						  </form>							
+						</div>

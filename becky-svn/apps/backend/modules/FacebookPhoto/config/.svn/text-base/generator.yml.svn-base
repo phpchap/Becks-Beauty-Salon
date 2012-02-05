@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           FacebookPhoto
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          facebook_photo
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [ id, name, link, backend_photo, live_on_homepage, live_in_photos, updated_at ]
+        title: Facebook Albums
+        fields:  
+          id: { label: ID }        
+          name: { label: Album Name }          
+          link: { label: Facebook Link }
+          live_on_homepage: { label:  Show on Homepage }
+          backend_photo: { label:  Photo }          
+          updated_at: { label: Last Updated, date_format: dd/MM/yyyy }        
+      filter:  ~
+      form:
+        class: BackendFacebookPhotoForm
+      edit:
+        display:
+          Content: [id, name, live_on_homepage, live_in_photos]
+      new:     ~

@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Photo
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          photo
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [ id, backend_photo, title, live, created_at, updated_at]
+        title: List of Photos
+        fields:
+          backend_photo: { label: Uploaded Photo }
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

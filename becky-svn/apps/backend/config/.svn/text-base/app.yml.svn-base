@@ -1,0 +1,19 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+    
+  image_one_height: 300
+  image_one_width: 300
+
+  image_two_height: 160
+  image_two_width: 160
+
+  image_three_height: 85
+  image_three_width: 85
+
+  image_four_height: 50
+  image_four_width: 50
+
+  num_photos_backend: 6 # how many photos to process

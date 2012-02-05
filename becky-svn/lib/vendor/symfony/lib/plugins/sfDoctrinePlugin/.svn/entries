@@ -1,0 +1,80 @@
+10
+
+dir
+41
+svn+ssh://bbs/home/ec2-user/becky-svn/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin
+svn+ssh://bbs/home/ec2-user/becky-svn
+
+
+
+2011-02-08T21:28:54.275319Z
+1
+ec2-user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+155eebb4-44c9-44fc-a2e8-c4ca3e9d0abf
+
+i18n
+dir
+
+test
+dir
+
+LICENSE
+file
+
+
+
+
+2011-02-12T10:58:38.000000Z
+80471cf84254400024258aca8bbce630
+2011-02-08T21:28:54.275319Z
+1
+ec2-user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1064
+
+config
+dir
+
+lib
+dir
+
+data
+dir
+
+web
+dir
+

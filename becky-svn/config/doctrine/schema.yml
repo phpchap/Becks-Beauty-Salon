@@ -1,0 +1,215 @@
+TreatmentGroup:
+  connection: doctrine
+  tableName: treatment_group
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    name:
+      type: string(255)
+    display_order:
+      type: integer(8)
+
+SpecialOffer:
+  connection: doctrine
+  tableName: special_offer
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    description_one:
+      type: string(255)
+    description_two:
+      type: string(255)
+    description_three:
+      type: string(255)
+    display_order:
+      type: integer(1)
+    front_page:
+      type: boolean
+    live:
+      type: boolean
+
+MailingList:
+  actAs: [ Timestampable ]
+  connection: doctrine
+  tableName: mailing_list
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    email:
+      type: string(255)
+
+Testimonial:
+  actAs: [ Timestampable ]
+  connection: doctrine
+  tableName: testimonial
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    statement:
+      type: string(255)
+    name:
+      type: string(255)
+    display_order:
+      type: integer(4)
+    live:
+      type: boolean
+
+FacebookAlbum:
+  actAs: [ Timestampable ]
+  connection: doctrine
+  tableName: facebook_album
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    fb_id:
+      type: string
+    name:
+      type: string
+    link:
+      type: string
+    cover_photo:
+      type: string
+    photo_count:
+      type: string
+    type:
+      type: string
+    fb_created_time:
+      type: string
+    fb_updated_time:
+      type: string
+    num_comments:
+      type: string         
+    live_in_photos:
+      type: boolean
+
+FacebookPhoto:
+  actAs: [ Timestampable ]
+  connection: doctrine
+  tableName: facebook_photo
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    app_album_id:
+      type: integer(8)      
+    fb_id:
+      type: string
+    fb_album_id:
+      type: string
+    name:
+      type: string
+    picture:
+      type: string
+    source:
+      type: string
+    height:
+      type: string
+    width:
+      type: string
+    image_one_height:
+      type: string
+    image_one_width:
+      type: string
+    image_one_source:
+      type: string
+    image_two_height:
+      type: string
+    image_two_width:
+      type: string
+    image_two_source:
+      type: string
+    image_three_height:
+      type: string
+    image_three_width:
+      type: string
+    image_three_source:
+      type: string
+    image_four_height:
+      type: string
+    image_four_width:
+      type: string
+    image_four_source:
+      type: string
+    link:
+      type: string
+    icon:
+      type: string
+    fb_created_time:
+      type: string
+    fb_created_time:
+      type: string
+    fb_updated_time:
+      type: string
+    position:
+      type: integer(8)
+    comments:
+      type: text
+    live_in_photos:
+      type: boolean      
+    live_on_homepage:
+      type: boolean
+
+Photo:
+  actAs: [ Timestampable ]
+  connection: doctrine
+  tableName: photo
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    file_name:
+      type: string
+    title:
+      type: string
+    live:
+      type: boolean
+
+Product:
+  actAs: [ Timestampable ]
+  connection: doctrine
+  tableName: product
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    name:
+      type: string(100)
+    price:
+      type: 'decimal(20, 2)'
+    is_available:
+      type: boolean
+    category_id:
+      type: integer(8)
+    extra_info:
+      type: string(255)
+
+Category:
+  actAs: [ Timestampable ]
+  connection: doctrine
+  tableName: category
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    name:
+      type: string(100)
+    display_order:
+      type: integer(1)
+    extra_info:
+      type: string(255)
+    treatment_group_id:
+      type: integer(8)

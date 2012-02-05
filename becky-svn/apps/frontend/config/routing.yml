@@ -1,0 +1,44 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+# default rules
+getFacebookPhotos:
+  url: /getFacebookPhotos/
+  param: { module: content, action: getFacebookPhotos }
+
+# default rules
+contact:
+  url: /contact/
+  param: { module: content, action: contact }
+
+testimonials:
+  url: /testimonials/
+  param: { module: content, action: testimonials }
+
+treatments:
+  url: /treatments/
+  param: { module: content, action: treatments }
+
+special_offers:
+  url: /special-offers/
+  param: { module: content, action: specialOffers }
+
+gallery:
+  url: /gallery/
+  param: { module: content, action: gallery }
+
+gallery_page:
+  url:   /gallery/:page
+  param: { module: content, action: gallery }
+  
+ajaxContactUs:
+  url: /ajax-contact-us
+  param: { module: content, action: ajaxContactUs }
+
+ajaxMailingList:
+  url: /ajax-mailing-list
+  param: { module: content, action: ajaxMailingList }
+
+  
+homepage:
+  url:   /
+  param: { module: content, action: index }

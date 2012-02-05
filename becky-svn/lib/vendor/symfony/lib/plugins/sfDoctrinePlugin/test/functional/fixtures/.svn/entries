@@ -1,0 +1,86 @@
+10
+
+dir
+41
+svn+ssh://bbs/home/ec2-user/becky-svn/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/test/functional/fixtures
+svn+ssh://bbs/home/ec2-user/becky-svn
+
+
+
+2011-02-08T21:28:54.275319Z
+1
+ec2-user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+155eebb4-44c9-44fc-a2e8-c4ca3e9d0abf
+
+test
+dir
+
+log
+dir
+
+plugins
+dir
+
+apps
+dir
+
+cache
+dir
+
+symfony
+file
+
+
+
+
+2011-02-12T10:58:33.000000Z
+36073c1914105fb3bbb4f1ce4965b4d2
+2011-02-08T21:28:54.275319Z
+1
+ec2-user
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+482
+
+config
+dir
+
+lib
+dir
+
+data
+dir
+

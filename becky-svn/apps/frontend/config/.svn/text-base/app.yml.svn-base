@@ -1,0 +1,23 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+# TBA..
+all:
+  num_photos_homepage: 4
+  num_offers_homepage: 1
+  address_one: 'Fagans Lane'
+  address_two: 'Maynooth'
+  county: 'Co. Kildare'
+  telephone: '016 016016'
+  contact_us_email: 'hello@becksbeautysalon.com'
+  email_from_address: 'website@becksbeautysalon.com'
+  company_registration_number: "Company Registration: 423686"
+  salon_latitude: '53.381708'
+  salon_longitude: '-6.591582'
+  # facebook settings
+  facebook_app_id:  154182314654218
+  facebook_secret:  300c979b69cc2ffaac86141ff38e7e32
+  facebook_api_key: a286eda2d7cda414a7d24a0f901e35a9  
+  # google maps api key
+  gmaps_api_key: 'ABQIAAAA3yBbD-ypUpJQW9mSmjjBaRTfbgrEaP9t75OOyX--YnP9jVyXwxSG7CyK_xDntDNbty7nNekOU-evxg'

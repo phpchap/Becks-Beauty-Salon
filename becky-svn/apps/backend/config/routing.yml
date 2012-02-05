@@ -1,0 +1,97 @@
+treatment_group:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TreatmentGroup
+    module:               TreatmentGroup
+    prefix_path:          /TreatmentGroup
+    column:               id
+    with_wildcard_routes: true
+
+facebook_photo:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FacebookPhoto
+    module:               FacebookPhoto
+    prefix_path:          /FacebookPhoto
+    column:               id
+    with_wildcard_routes: true
+
+facebook_album:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FacebookAlbum
+    module:               FacebookAlbum
+    prefix_path:          /FacebookAlbum
+    column:               id
+    with_wildcard_routes: true
+
+special_offer_SpecialOfferd:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SpecialOffer
+    module:               SpecialOfferd
+    prefix_path:          /SpecialOfferd
+    column:               id
+    with_wildcard_routes: true
+
+product:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Product
+    module:               Product
+    prefix_path:          /Product
+    column:               id
+    with_wildcard_routes: true
+
+testimonial:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Testimonial
+    module:               Testimonial
+    prefix_path:          /Testimonial
+    column:               id
+    with_wildcard_routes: true
+
+special_offer:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SpecialOffer
+    module:               SpecialOffer
+    prefix_path:          /SpecialOffer
+    column:               id
+    with_wildcard_routes: true
+
+photo:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Photo
+    module:               Photo
+    prefix_path:          /Photo
+    column:               id
+    with_wildcard_routes: true
+
+mailing_list:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                MailingList
+    module:               MailingList
+    prefix_path:          /MailingList
+    column:               id
+    with_wildcard_routes: true
+
+category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Category
+    module:               Category
+    prefix_path:          /Category
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: Dashboard, action: index }

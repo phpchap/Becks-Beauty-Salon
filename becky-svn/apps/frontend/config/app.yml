@@ -1,0 +1,35 @@
+all:
+  num_photos_homepage: 4
+  num_offers_homepage: 1
+  num_photos_gallery: 10
+  # contact details here for conveniece
+  address_one: 'Fagans Lane'
+  address_two: 'Maynooth'
+  county: 'Co. Kildare'
+  telephone: '016 016016'
+  contact_us_email: 'hello@becksbeautysalon.com'
+  email_from_address: 'website@becksbeautysalon.com'
+  company_registration_number: "Company Registration: 423686"
+  # used for google maps
+  salon_latitude: '53.381708'
+  salon_longitude: '-6.591582'
+  # facebook settings
+  facebook_app_id:  'xxxxxxx'
+  facebook_secret:  'xxxxxxx'
+  facebook_api_key: 'xxxxxxx'
+  facebook_page_id: '131424670248995'
+  # google maps api key
+  gmaps_api_key: 'xxxxxxx'
+  # mailchimp api details
+  # ---------------------
+  # API Key - see http://admin.mailchimp.com/account/api
+  mailchimp_api_key: 'xxxxxxx'
+  # A List Id to run examples against. use lists() to view all
+  # Also, login to MC account, go to List, then List Tools, and look for the List ID entry
+  mailchimp_list_id: '242ac61afb'
+  # A Campaign Id to run examples against. use campaigns() to view all
+  mailchimp_campaign_id: '74906665ae'
+  # some email addresses used in the examples:
+  my_email: 'phpchap@gmail.com' 
+  # base url of the mailchimp api
+  api_url: 'http://api.mailchimp.com/1.3/'

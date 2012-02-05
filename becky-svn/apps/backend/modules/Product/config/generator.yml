@@ -1,0 +1,24 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Product
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          product
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [ id, name, price_backend, is_available, category_name, extra_info ]
+        title: List of Products
+      filter:  ~
+      form:
+        class: BackendProductForm
+      edit:    ~
+      new:     ~

@@ -1,0 +1,796 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+TreatmentGroup:
+  One:
+    id: 1
+    name: "Women's Treatments"
+    display_order: 1
+  Two:
+    id: 2
+    name: "Men's Treatments"
+    display_order: 2
+  Three:
+    id: 3
+    name: "Students Treatments"
+    display_order: 3
+    
+Testimonial:
+  One:
+    id: 1 
+    statement: I really really like this kind of thing
+    name: Mrs Billy O'Really
+    display_order: 1
+    live: 1
+  Two:
+    id: 2
+    statement: Another really long statement about how wonderful things are 
+    name: Miss Tiny Tina
+    display_order: 2
+    live: 1
+  Three:
+    id: 3
+    statement: This is a really huge long statement from a dothering old bat who doesnt really get out much but is thankful of the little human contact
+    name: Mrs Really Old Dingbat
+    display_order: 3
+    live: 1
+  Four:
+    id: 4
+    statement: This is a short statement
+    name: Mr Justen Doherty
+    display_order: 4
+    live: 1
+  Five:
+    id: 5 
+    statement: 'This could be the last statement, yes i think now this is the last statement'
+    name: Miss A N Other
+    display_order: 5
+    live: 1
+    
+    
+SpecialOffer:
+  One:
+    id: 1
+    description_one: Special Offer Header One
+    description_two: Line one special offer text
+    description_three: Line two special offer text
+    display_order: 1
+    front_page: 1
+    live: 1
+  Two:
+    id: 2
+    description_one: Special Offer Header Two
+    description_two: Line one special offer text
+    description_three: Line two special offer text
+    display_order: 2 
+    front_page: 1
+    live: 1
+  Three:
+    id: 4 
+    description_one: Special Offer Header Three
+    description_two: Line one special offer text
+    description_three: Line two special offer text
+    display_order: 3
+    front_page: 0
+    live: 1
+    
+Photo:
+  Five:
+    file_name: uploaded_791d1aca2f25e691985561b131840b6d5cefad39.png 
+    title: favg5va
+    live: 1
+    created_at: '2011-03-06 14:00:49'
+    updated_at: '2011-03-06 14:00:49'
+  Four:
+    file_name: uploaded_791d1aca2f25e691985561b131840b6d5cefad39.png 
+    title: 3gsg5y
+    live: 1
+    created_at: '2011-03-06 14:00:49'
+    updated_at: '2011-03-06 14:00:49'                
+  Three:
+    file_name: uploaded_791d1aca2f25e691985561b131840b6d5cefad39.png 
+    title: adgga
+    live: 1
+    created_at: '2011-03-06 15:00:49'
+    updated_at: '2011-03-06 15:00:49'            
+  Two:
+    file_name: uploaded_791d1aca2f25e691985561b131840b6d5cefad39.png 
+    title: faf4f
+    live: 1
+    created_at: '2011-03-06 16:00:49'
+    updated_at: '2011-03-06 16:00:49'        
+  One:
+    file_name: uploaded_791d1aca2f25e691985561b131840b6d5cefad39.png 
+    title: asdfasdf
+    live: 1
+    created_at: '2011-03-06 15:56:33'
+    updated_at: '2011-03-06 15:56:33'
+
+Product:
+  One:
+    id: 1
+    name: "OPI manicure"
+    price: 35
+    is_available: 1
+    category_id: 1
+    extra_info: ""
+
+  Two:
+    id: 2
+    name: "Mini manicure"
+    price: 18
+    is_available: 1
+    category_id: 1
+    extra_info: ""
+    
+  Three: 
+    id: 3
+    name: "File and polish"
+    price: 12
+    is_available: 1
+    category_id: 1
+    extra_info: ""
+    
+  Four:
+    id: 4
+    name: "OPI pedicure"
+    price: 45
+    is_available: 1
+    category_id: 2
+    extra_info: ""
+    
+  Five:
+    id: 5
+    name: "Mini pedicure"
+    price: 18
+    is_available: 1
+    category_id: 2
+    extra_info: ""
+    
+  Six:
+    id: 6
+    name: "File and polish"
+    price: 12
+    is_available: 1
+    category_id: 2
+    extra_info: ""
+    
+  Seven:
+    id: 7
+    name: "Nail art from"
+    price: 1
+    is_available: 1
+    category_id: 2
+    extra_info: ""
+    
+  Eight:
+    id: 8
+    name: "Diamonds from"
+    price: 0.50
+    is_available: 1
+    category_id: 2
+    extra_info: ""
+    
+  Nine:
+    id: 9
+    name: "Full body massage"
+    price: 55
+    is_available: 1
+    category_id: 3
+    extra_info: "(1 hour)"
+    
+  Ten:
+    id: 10
+    name: "Back massage"
+    price: 35
+    is_available: 1
+    category_id: 3
+    extra_info: "(30mins)"
+    
+  Eleven:
+    id: 11
+    name: "Aromatherapy full body"
+    price: 60
+    is_available:
+    category_id: 3
+    extra_info: "(1 hour)"
+    
+  Twelve:
+    id: 12
+    name: "Aromatherapy back massage"
+    price: 40
+    is_available: 1
+    category_id: 3
+    extra_info: "(30mins)"
+    
+  Thirteen:
+    id: 13
+    name: "Eyecombo"
+    price: 20
+    is_available: 1
+    category_id: 4
+    extra_info: "(lash tint,brow tint.brow shape)"
+    
+  Fourteen:
+    id: 14
+    name: "Eyelash tint"
+    price: 10
+    is_available: 1
+    category_id: 4
+    extra_info: "(lash tint,brow tint.brow shape)"
+    
+  Fifteen:
+    id: 15
+    name: "Eyebrow tint"
+    price: 5
+    is_available: 1
+    category_id: 4
+    extra_info: ""
+    
+  Sixteen:
+    id: 16
+    name: "Eyebrow wax"
+    price: 10
+    is_available: 1
+    category_id: 4
+    extra_info: ""
+    
+  Seventeen:
+    id: 17
+    name: "Occasional"
+    price: 20
+    is_available: 1
+    category_id: 5
+    extra_info: ""
+    
+  Eighteen:
+    id: 18
+    name: "Strip lashes"
+    price: 10
+    is_available: 1
+    category_id: 5
+    extra_info: ""
+    
+  Nineteen:
+    id: 19
+    name: "Full set"
+    price: 50
+    is_available: 1
+    category_id: 6
+    extra_info: ""
+    
+  Twenty:
+    id: 20
+    name: "Rewhites"
+    price: 40
+    is_available: 1
+    category_id: 6
+    extra_info: ""
+    
+  TwentyOne:
+    id: 21
+    name: "Refills"
+    price: 28
+    is_available: 1
+    category_id: 6
+    extra_info: ""
+    
+  TwentyTwo:
+    id: 22
+    name: "Buff and gloss"
+    price: 18
+    is_available: 1
+    category_id: 6
+    extra_info: ""
+    
+  TwentyThree:
+    id: 23
+    name: "Gels removed"
+    price: 30
+    is_available: 1
+    category_id: 6
+    extra_info: "(incl. mini manicure)"
+    
+  TwentyFour:
+    id: 24
+    name: "Gelish nails"
+    price: 30
+    is_available: 1
+    category_id: 6
+    extra_info: ""
+    
+  TwentyFive:
+    id: 25
+    name: "Gelish toes"
+    price: 45
+    is_available: 1
+    category_id: 6
+    extra_info: ""
+    
+  TwentySix:
+    id: 26
+    name: "Gelish removed"
+    price: 5
+    is_available: 1
+    category_id: 6    
+    extra_info: ""
+    
+  TwentySeven:
+    id: 27
+    name: "Overlays"
+    price: 28
+    is_available: 1
+    category_id: 6
+    extra_info: "(on natural nails)"
+    
+  TwentyEight:
+    id: 28
+    name: "Eyebrow wax"
+    price: 8
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  TwentyNine:
+    id: 29
+    name: "Lip wax"
+    price: 8
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  Thirty:
+    id: 30
+    name: "Lip Hot wax"
+    price: 10
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtyOne:
+    id: 31
+    name: "Chin wax"
+    price: 8
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtyTwo:
+    id: 32
+    name: "Chin Hot wax"
+    price: 10
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtyThree:
+    id: 33
+    name: "Face wax"
+    price: 10
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtyFour:
+    id: 34
+    name: "Face Hot wax"
+    price: 12
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtyFive:
+    id: 35
+    name: "Forearm"
+    price: 15
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtySix:
+    id: 36
+    name: "Underarm"
+    price: 8
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtySeven:
+    id: 37
+    name: "Underarm Hot wax"
+    price: 10
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtyEight:
+    id: 38
+    name: "Half leg"
+    price: 15
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  ThirtyNine:
+    id: 39
+    name: "3/4 leg"
+    price: 20
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  Fourty:
+    id: 40
+    name: "Full leg"
+    price: 25
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  FourtyOne:
+    id: 41
+    name: "Full leg + bikini"
+    price: 30
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  FourtyTwo:
+    id: 42
+    name: "Regular bikini"
+    price: 20
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  FourtyThree:
+    id: 43
+    name: "Regular bikini Hotwax"
+    price: 25
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  FourtyFour:
+    id: 44
+    name: "Californian wax"
+    price: 25
+    is_available: 1
+    category_id: 7
+    extra_info: "(ultra tidy)"
+    
+  FourtyFive:
+    id: 45
+    name: "Californian wax Hot wax"
+    price: 30
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  FourtySix:
+    id: 46
+    name: "Brazilian wax"
+    price: 35
+    is_available: 1
+    category_id: 7
+    extra_info: "(landing strip)"
+    
+  FourtySeven:
+    id: 47
+    name: "Brazilian hot wax"
+    price: 40
+    is_available: 1
+    category_id: 7
+    extra_info: "(landing strip)"
+    
+  FourtyEight:
+    id: 48
+    name: "Hollywood wax"
+    price: 45
+    is_available: 1
+    category_id: 7
+    extra_info: "(all gone!)"
+    
+  FourtyNine:
+    id: 49
+    name: "Hollywood Hot wax"
+    price: 50
+    is_available: 1
+    category_id: 7
+    extra_info: ""
+    
+  Fifty:
+    id: 50
+    name: "Full body spray tan"
+    price: 35
+    is_available: 1
+    category_id: 8
+    extra_info: ""
+    
+  FiftyOne:
+    id: 51
+    name: "Half body spray tan"
+    price: 25
+    is_available: 1
+    category_id: 8
+    extra_info: "(All tanning treatments includes next day top up free of charge)"
+    
+  FiftyTwo:
+    id: 52
+    name: "Make up application"
+    price: 30
+    is_available: 1
+    category_id: 10
+    extra_info: ""
+    
+  FiftyThree:
+    id: 53
+    name: "Bridal make up incl.trial"
+    price: 50
+    is_available: 1
+    category_id: 10
+    extra_info: ""
+    
+  FiftyFour:
+    id: 54
+    name: "Make up lesson"
+    price: 40
+    is_available: 1
+    category_id: 10
+    extra_info: ""
+
+  FiftyFive:
+    id: 55
+    name: "Mini Manicure"
+    price: 15
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  FiftySix:
+    id: 56
+    name: "Mini Pedicure"
+    price: 15
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  FiftySeven:
+    id: 57
+    name: "Pedicure"
+    price: 35
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  FiftyEight:
+    id: 58
+    name: "Eyebrow shape"
+    price: 5
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  FiftyNine:
+    id: 59
+    name: "Back wax"
+    price: 10 - €20
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  Sixty:
+    id: 60
+    name: "Chest wax"
+    price: 10 - €20
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  SixtyOne:
+    id: 61
+    name: "Shoulder wax"
+    price: 5 - €10
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  SixtyTwo:
+    id: 62
+    name: "Full body tan"
+    price: 30
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  SixtyThree:
+    id: 63
+    name: "Half body tan"
+    price: 20
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  SixtyFour:
+    id: 64
+    name: "Mini Facial"
+    price: 30
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  SixtyFive:
+    id: 65
+    name: "All Hour Facials"
+    price: 40
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  SixtySix:
+    id: 66
+    name: "Ultimate Relaxable"
+    price: 90
+    is_available: 1
+    category_id: 11
+    extra_info: ""
+
+  SixtySeven:
+    id: 67
+    name: "Eyebrow"
+    price: 5
+    is_available: 1
+    category_id: 12
+    extra_info: ""
+
+  SixtyEight:
+    id: 68
+    name: "Californian"
+    price: 20
+    is_available: 1
+    category_id: 12
+    extra_info: ""
+    
+  SixtyNine:
+    id: 69
+    name: "Brazilian"
+    price: 20
+    is_available: 1
+    category_id: 12
+    extra_info: ""
+
+  Seventy:
+    id: 70
+    name: "Hollywood"
+    price: 35
+    is_available: 1
+    category_id: 12
+    extra_info: ""
+
+  SeventyOne:
+    id: 71
+    name: "Gel Nails"
+    price: 40
+    is_available: 1
+    category_id: 12
+    extra_info: ""
+
+  SeventyTwo:
+    id: 72
+    name: "Mini Facials"
+    price: 20
+    is_available: 1
+    category_id: 12
+    extra_info: ""
+
+  SeventyThree:
+    id: 73
+    name: "Full Body Tan"
+    price: 20
+    is_available: 1
+    category_id: 12
+    extra_info: ""
+
+  SeventyFour:
+    id: 74
+    name: "Full body scrub"
+    price: 15
+    is_available: 1
+    category_id: 9
+    extra_info: ""
+
+  SeventyFive:
+    id: 75
+    name: "Half body scrub"
+    price: 10
+    is_available: 1
+    category_id: 9
+    extra_info: "This treatment is ideal for the day before a big event or tanning, this will remove all dead and dry skin to leave it smooth soft and bright."
+
+Category:
+  One:
+    id: 1
+    name: Handywork
+    display_order: 1
+    extra_info: ""
+    treatment_group_id: 1    
+  Two:
+    id: 2
+    name: "Treat Your Feet"
+    display_order: 2
+    extra_info: ""
+    treatment_group_id: 1    
+  Three:
+    id: 3
+    name: "Now for the Body"
+    display_order: 3
+    extra_info: ""
+    treatment_group_id: 1    
+  Four:
+    id: 4
+    name: "Mind Your Eyes"
+    display_order: 4
+    extra_info: "All tinting requires 24hr patch test"
+    treatment_group_id: 1    
+  Five:
+    id: 5
+    name: "Flash Those Lashes"
+    display_order: 5    
+    extra_info: ""
+    treatment_group_id: 1    
+  Six:
+    id: 6
+    name: "Nail Extensions"
+    display_order: 6    
+    extra_info: ""
+    treatment_group_id: 1    
+  Seven:
+    id: 7
+    name: "Get Your Wax On"
+    display_order: 7    
+    extra_info: ""
+    treatment_group_id: 1    
+  Eight:
+    id: 8
+    name: "Keep it Glowing"
+    display_order: 8    
+    extra_info: ""
+    treatment_group_id: 1    
+  Nine:
+    id: 9
+    name: "All Scrubbed Up"
+    display_order: 9    
+    extra_info: "This treatment is ideal for the day before a big event or tanning, this will remove all dead and dry skin to leave it smooth,soft and bright."
+    treatment_group_id: 1    
+  Ten:
+    id: 10
+    name: "Put Your Face On"
+    display_order: 10    
+    extra_info: ""
+    treatment_group_id: 1    
+  Eleven:
+    id: 11
+    name: "Mens Treatments"
+    display_order: 1
+    extra_info: ""
+    treatment_group_id: 2    
+  Twelve:
+    id: 12
+    name: "Students Treatments"
+    display_order: 1
+    extra_info: "Additional 10% off for all treatments for students excluding specials."
+    treatment_group_id: 3  

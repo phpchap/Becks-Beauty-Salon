@@ -1,0 +1,70 @@
+10
+
+dir
+41
+svn+ssh://bbs/home/ec2-user/becky-svn/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib
+svn+ssh://bbs/home/ec2-user/becky-svn
+
+
+
+2011-02-08T21:28:54.275319Z
+1
+ec2-user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+155eebb4-44c9-44fc-a2e8-c4ca3e9d0abf
+
+behavior
+dir
+
+test
+dir
+
+log
+dir
+
+task
+dir
+
+form
+dir
+
+widget
+dir
+
+database
+dir
+
+addon
+dir
+
+validator
+dir
+
+debug
+dir
+
+generator
+dir
+
+routing
+dir
+
+mailer
+dir
+
+vendor
+dir
+

@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           FacebookAlbum
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          facebook_album
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [ id, name, link, photo_count, live_in_photos, updated_at ]        
+        title: Facebook Albums
+        fields:  
+          id: { label: ID }        
+          name: { label: Album Name }          
+          link: { label: Facebook Link }
+          photo_count: { label: Photo Count }
+          live_in_photos: { label:  Show in Gallery }
+          updated_at: { label: Last Updated, date_format: dd/MM/yyyy }
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

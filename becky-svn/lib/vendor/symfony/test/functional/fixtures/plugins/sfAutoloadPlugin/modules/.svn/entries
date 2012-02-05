@@ -1,0 +1,31 @@
+10
+
+dir
+41
+svn+ssh://bbs/home/ec2-user/becky-svn/lib/vendor/symfony/test/functional/fixtures/plugins/sfAutoloadPlugin/modules
+svn+ssh://bbs/home/ec2-user/becky-svn
+
+
+
+2011-02-08T21:28:54.275319Z
+1
+ec2-user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+155eebb4-44c9-44fc-a2e8-c4ca3e9d0abf
+
+autoloadPlugin
+dir
+

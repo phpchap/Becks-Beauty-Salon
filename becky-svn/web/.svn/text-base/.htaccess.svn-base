@@ -1,0 +1,31 @@
+Options +FollowSymLinks +ExecCGI
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # uncomment the following line, if you are having trouble
+  # getting no_script_name to work
+  #RewriteBase /
+
+  # we skip all files with .something
+  #RewriteCond %{REQUEST_URI} \..+$
+  #RewriteCond %{REQUEST_URI} !\.html$
+  #RewriteRule .* - [L]
+
+  # we check if the .html version is here (caching)
+  RewriteRule ^$ index.html [QSA]
+  RewriteRule ^([^.]+)$ $1.html [QSA]
+  RewriteCond %{REQUEST_FILENAME} !-f
+
+  # no, so we redirect to our front web controller
+  RewriteRule ^(.*)$ index.php [QSA,L]
+
+	# BEGIN ImageResizing
+	#RewriteBase /
+	# scaling small, medium, large
+	RewriteRule ^img-small/([A-Za-z0-9/_-]+).(jpg|gif|png)$ images.php?max_width=100&imgfile=$1.$2
+	RewriteRule ^img-medium/([A-Za-z0-9/_-]+).(jpg|gif|png)$ images.php?max_width=230&imgfile=$1.$2
+	RewriteRule ^img-large/([A-Za-z0-9/_-]+).(jpg|gif|png)$ images.php?max_width=470&imgfile=$1.$2
+
+
+</IfModule>
